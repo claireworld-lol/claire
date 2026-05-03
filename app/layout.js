@@ -1,4 +1,6 @@
 import { Inter, Space_Grotesk } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const SITE_URL = 'https://www.claireworld.lol';
 import Script from 'next/script';
@@ -86,6 +88,9 @@ export default function RootLayout({ children }) {
         <FirebaseProvider>
           {children}
         </FirebaseProvider>
+
+        <Analytics />
+        <SpeedInsights />
 
         <Script
           src="https://checkout.razorpay.com/v1/checkout.js"

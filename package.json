@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "firebase": "^10.8.1",
     "next": "^15.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "razorpay": "^2.9.4",
-    "firebase": "^10.8.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

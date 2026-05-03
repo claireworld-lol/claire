@@ -1,13 +1,15 @@
 import HomeClient from '../components/HomeClient';
 
+const SITE_URL = 'https://www.claireworld.lol';
+
 export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'CLAIRE',
-    url: 'https://claire.vercel.app',
-    logo: 'https://claire.vercel.app/claire_logo.jpg',
-    image: 'https://claire.vercel.app/claire_logo.jpg',
+    url: SITE_URL,
+    logo: `${SITE_URL}/claire_logo.jpg`,
+    image: `${SITE_URL}/claire_logo.jpg`,
     telephone: '+916354315878',
     description: 'Premium academic writing, graphic design, website development & project solutions. PPT presentations, assignments, research papers, eBooks, engineering projects & more.',
     priceRange: '₹₹',

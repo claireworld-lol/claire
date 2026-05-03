@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://claire.vercel.app';
+  const baseUrl = 'https://www.claireworld.lol';
 
   return [
     {

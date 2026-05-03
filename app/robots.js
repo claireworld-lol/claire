@@ -7,6 +7,6 @@ export default function robots() {
         disallow: ['/admin', '/api/'],
       },
     ],
-    sitemap: 'https://claire.vercel.app/sitemap.xml',
+    sitemap: 'https://www.claireworld.lol/sitemap.xml',
   };
 }

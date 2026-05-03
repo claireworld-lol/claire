@@ -1,4 +1,6 @@
 import { Inter, Space_Grotesk } from 'next/font/google';
+
+const SITE_URL = 'https://www.claireworld.lol';
 import Script from 'next/script';
 import { FirebaseProvider } from '../components/FirebaseProvider';
 import '../styles/globals.css';
@@ -16,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://claire.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'CLAIRE — Academic, Creative & Development Services | Vadodara',
     template: '%s | CLAIRE',
@@ -34,7 +36,7 @@ export const metadata = {
   openGraph: {
     title: 'CLAIRE — Where Ideas Meet Precision & Elegance',
     description: 'Premium academic, creative & development solutions powered by AI & human expertise. Trusted by 500+ clients in Vadodara.',
-    url: 'https://claire.vercel.app',
+    url: SITE_URL,
     siteName: 'CLAIRE',
     images: [{ url: '/claire_logo.jpg', width: 1024, height: 1024, alt: 'CLAIRE — Academic & Creative Services Logo' }],
     locale: 'en_IN',
@@ -62,9 +64,11 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://claire.vercel.app',
+    canonical: SITE_URL,
   },
-  verification: {},
+  verification: {
+    google: '_sLhdVVk-HhjX5ZsSGWE7avGD_L27VnM_1NlEEp9z9s',
+  },
 };
 
 export default function RootLayout({ children }) {

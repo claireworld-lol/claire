@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Admin Validation
+    function isAdmin() {
+      return request.auth != null && request.auth.uid == 'J4eIbuWDlyXPHBgsH301jMROd3y1';
+    }
+
+    match /payments/{paymentId} {
+      // Allow any logged-in user to create their payment record
+      allow create: if request.auth != null;
+      
+      // ONLY the Admin (You) can read or modify the database
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

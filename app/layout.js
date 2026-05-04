@@ -77,12 +77,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          />
+        </noscript>
       </head>
       <body>
         <FirebaseProvider>
@@ -91,6 +92,20 @@ export default function RootLayout({ children }) {
 
         <Analytics />
         <SpeedInsights />
+
+        <Script
+          id="load-font-awesome"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+              link.crossOrigin = 'anonymous';
+              document.head.appendChild(link);
+            `,
+          }}
+        />
 
         <Script
           src="https://checkout.razorpay.com/v1/checkout.js"

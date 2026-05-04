@@ -16,7 +16,7 @@ export default function Hero({ onLoginClick }) {
 
   return (
     <section className="hero">
-      <FadeIn className="hero-left">
+      <div className="hero-left">
         <h1 className="hero-title">
           Where ideas meet<br />
           <span className="gradient-text">precision &amp; elegance</span>
@@ -57,9 +57,9 @@ export default function Hero({ onLoginClick }) {
             @claireworld.lol
           </a>
         </div>
-      </FadeIn>
+      </div>
 
-      <FadeIn className="hero-right" delay={100}>
+      <div className="hero-right">
         <div className="mockup-card glass-panel">
           <i className="fa-regular fa-file-lines" style={{ fontSize: '2rem', color: '#2563eb' }} aria-hidden="true"></i>
           <h3 style={{ margin: '12px 0' }}>Projects, Papers &amp; Websites</h3>
@@ -71,7 +71,7 @@ export default function Hero({ onLoginClick }) {
           }}></div>
           <span style={{ fontSize: '0.8rem' }}>Trusted by 500+ clients</span>
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 }
